@@ -5,7 +5,7 @@ namespace App;
 trait AccountTrait
 {
   /*
-   * To store accounts against a model
+   * To  store accounts against a model
    *
    *@
    */
