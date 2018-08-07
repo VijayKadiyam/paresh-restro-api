@@ -17,6 +17,10 @@ Route::resource('menu-types', 'MenuTypeController');
 Route::resource('currencies', 'CurrencyController');
 // Statuses
 Route::resource('statuses', 'StatusController');
+// Discounts
+Route::resource('discounts', 'DiscountController');
+// Discount types
+Route::resource('discount-types', 'DiscountTypeController');
 
 // Auth
 Route::post('/login', 'Auth\LoginController@login');
@@ -38,6 +42,8 @@ Route::resource('addon-menus', 'AddonMenuController');
 Route::resource('tables', 'TableController');
 // Orders
 Route::resource('orders', 'OrderController');
+// Order discounts
+Route::resource('orders/{order}/order-discounts', 'OrderDiscountController');
 // Tickets
 Route::resource('orders/{order}/tickets', 'TicketController');
 // Ticket addons

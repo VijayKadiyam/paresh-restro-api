@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\OrderDiscount;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
@@ -148,5 +149,16 @@ class Order extends Model
   public function contacts()
   {
     return $this->belongsToMany(Contact::class);
+  }
+
+  /*
+   * An order has many order discounts
+   *
+   *@
+   */
+  public function order_discounts()
+  {
+    return $this->hasMany(OrderDiscount::class)
+      ->with('order', 'discount_type', 'discount');
   }
 }

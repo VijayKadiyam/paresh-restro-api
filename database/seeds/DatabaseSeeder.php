@@ -4,8 +4,10 @@ use App\Role;
 use App\Source;
 use App\Status;
 use App\Currency;
+use App\Discount;
 use App\MenuType;
 use App\ContactType;
+use App\DiscountType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,6 +25,8 @@ class DatabaseSeeder extends Seeder
     Currency::truncate();
     Status::truncate();
     Source::truncate();
+    Discount::truncate();
+    DiscountType::truncate();
 
     $this->call(RoleTableSeeder::class);
     $this->call(ContactTypeTableSeeder::class);
@@ -30,5 +34,7 @@ class DatabaseSeeder extends Seeder
     $this->call(CurrencyTableSeeder::class);
     $this->call(StatusTableSeeder::class);
     $this->call(SourceTableSeeder::class);
+    $this->call(DiscountSeeder::class);
+    $this->call(DiscountTypeSeeder::class);
   }
 }
