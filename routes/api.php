@@ -49,4 +49,6 @@ Route::resource('orders/{order}/tickets', 'TicketController');
 // Ticket addons
 Route::resource('orders/{order}/tickets/{ticket}/addons', 'TicketAddonController');
 
+Route::get('/print', 'PrintController@calculate');
+
 

@@ -153,6 +153,6 @@ class Hotel extends Model
   public function orders()
   {
     return $this->hasMany(Order::class)
-      ->with('source', 'tables', 'contacts', 'tickets');
+      ->with('source', 'tables', 'contacts', 'tickets', 'order_discounts');
   }
 }
