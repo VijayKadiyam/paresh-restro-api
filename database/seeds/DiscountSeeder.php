@@ -12,6 +12,7 @@ class DiscountSeeder extends Seeder
      */
     public function run()
     {
+      Discount::create(['name'  =>  '0%', 'percent' =>  '0']);
       Discount::create(['name'  =>  '1%', 'percent' =>  '1']);
       Discount::create(['name'  =>  '2%', 'percent' =>  '2']);
       Discount::create(['name'  =>  '3%', 'percent' =>  '3']);
