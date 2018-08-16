@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Hotel;
 use App\Items;
 use App\Printing;
+use Carbon\Carbon;
 use Mike42\Escpos\Printer;
 use Illuminate\Http\Request;
 use Mike42\Escpos\EscposImage;
 use App\Http\Controllers\OrderController;
 use Mike42\Escpos\PrintConnectors\CupsPrintConnector;
-use Carbon\Carbon;
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
 
 
 class PrintController extends Controller
