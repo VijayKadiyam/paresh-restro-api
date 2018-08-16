@@ -83,8 +83,8 @@ class PrintController extends Controller
   public function index()
   {
     // $connector = new CupsPrintConnector("EPSON_TM_T82_S_A");
-    $connector = new CupsPrintConnector("EPSON TM-T82 Receipt");
-    // $connector = new WindowsPrintConnector("Receipt Printer");
+    // $connector = new CupsPrintConnector("EPSON TM-T82 Receipt");
+    $connector = new WindowsPrintConnector("EPSON TM-T82 Receipt");
     /* Information for the receipt */
     $items = [];
     foreach($this->items as $item) {
