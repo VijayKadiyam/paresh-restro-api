@@ -113,9 +113,9 @@ class PrintController extends Controller
 
     /* Name of shop */
     $printer -> selectPrintMode(Printer::MODE_DOUBLE_WIDTH);
-    $printer -> text("Badmash Restaurant\n");
+    $printer -> text("Sohel's Foodee Paradise\n");
     $printer -> selectPrintMode();
-    $printer -> text("Shop No - 110, Royal Plaza Located on NH66 Rajapur, Maharashtra\n");
+    $printer -> text("Shop no. 2, Pharmed House, Walchand Hirachand Marg, Near CST Station, Fort, Mumbai, Maharashtra, 400 001\n");
     $printer -> feed();
 
     /* Title of receipt */
@@ -145,8 +145,8 @@ class PrintController extends Controller
     /* Footer */
     $printer -> feed(2);
     $printer -> setJustification(Printer::JUSTIFY_CENTER);
-    $printer -> text("Thank you for visiting at Badmash Restaurant\n");
-    $printer -> text("Please visit www.badmashrestro.com\n");
+    $printer -> text("Thank you for visiting at Sohel's Foodee Paradise\n");
+    $printer -> text("Please visit us again\n");
     $printer -> feed(2);
     $printer -> text($date . "\n");
 
