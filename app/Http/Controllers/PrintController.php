@@ -99,6 +99,7 @@ class PrintController extends Controller
     $subtotal = new item('Subtotal', $this->order->total_amount, false, ' ');
     $discount = new item('Discount', $this->discount, false, ' ');
     $total = new item('Total', $this->order->total_amount - $this->discount, true);
+    $inc = new item('', '(inc. GST)', '');
     /* Date is kept the same for testing */
     // $date = date('l jS \of F Y h:i:s A');
     $date = Carbon::now()->toDateTimeString();
@@ -141,6 +142,7 @@ class PrintController extends Controller
     $printer -> selectPrintMode(Printer::MODE_DOUBLE_WIDTH);
     $printer -> text($total);
     $printer -> selectPrintMode();
+    $printer -> text($inc);
 
     /* Footer */
     $printer -> feed(2);
