@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/print', 'PrintController@index');
