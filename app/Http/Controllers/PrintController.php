@@ -145,7 +145,7 @@ class PrintController extends Controller
     /* Footer */
     $printer -> feed(2);
     $printer -> setJustification(Printer::JUSTIFY_CENTER);
-    $printer -> text("Thank you for visiting at Sohel's Foodee Paradise\n");
+    $printer -> text("Thank you for visiting 'Sohel's Foodee Paradise'\n");
     $printer -> text("Please visit us again\n");
     $printer -> feed(2);
     $printer -> text($date . "\n");
