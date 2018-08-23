@@ -148,6 +148,7 @@ class PrintController extends Controller
     $printer -> text("Thank you for visiting 'Sohel's Foodee Paradise'\n");
     $printer -> text("Please visit us again\n");
     $printer -> feed(2);
+    $printer -> text("GSTN No: 27AZVPB3638B1ZE | FSSAI No: 21518001000362\n");
     $printer -> text($date . "\n");
 
     /* Cut the receipt and open the cash drawer */
