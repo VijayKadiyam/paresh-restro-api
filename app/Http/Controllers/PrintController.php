@@ -99,7 +99,7 @@ class PrintController extends Controller
     $subtotal = new item('Subtotal', $this->order->total_amount, false, ' ');
     $discount = new item('Discount', $this->discount, false, ' ');
     $total = new item('Total', $this->order->total_amount - $this->discount, true);
-    $inc = new item('', '(inc. GST)', '');
+    $inc = new item('', '(inc. GST)', false, ' ');
     /* Date is kept the same for testing */
     // $date = date('l jS \of F Y h:i:s A');
     $date = Carbon::now()->toDateTimeString();
