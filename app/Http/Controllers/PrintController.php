@@ -121,7 +121,7 @@ class PrintController extends Controller
 
     /* Title of receipt */
     $printer -> setEmphasis(true);
-    $printer -> text("SALES INVOICE\n");
+    $printer -> text("SALES INVOICE : ORDER NO-" . $this->order->id . "\n");
     $printer -> setEmphasis(false);
 
     /* Items */
